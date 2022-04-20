@@ -47,7 +47,7 @@ class RootFinder():
             if isinstance(J, Callable):
                 x -= func(x) / J(x)
             else:
-                J = derivative(func, x)
+                J = derivative(func, x) # TODO: replace scipy numerical derivative with the method in this library
                 x -= func(x) / J
             iter += 1
         return x, iter
