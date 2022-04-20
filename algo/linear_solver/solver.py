@@ -1,7 +1,7 @@
 import numpy as np
 from copy import deepcopy
 from scipy.linalg import lu
-from typing import List, Union
+from typing import Union
 
 
 class LinearSolver:
@@ -132,8 +132,6 @@ class LinearSolver:
             x[i] = d[i] - c[i] * x[i + 1]
 
         return x
-
-
 
 
     def conjugate_grad(self, A: np.ndarray, b: np.ndarray):
